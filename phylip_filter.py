@@ -48,7 +48,7 @@ for i,row in data.iterrows():
 # Remove IDs that breach the threshold
 data_filtered = pd.DataFrame(data[~data['ID'].isin(IDs_to_remove)])
 
-print('Removed',len(data_filtered),'of',phylip_header['sequences'][0],'sequences')
+print(len(data_filtered),'of',phylip_header['sequences'][0],'sequences remain after filtering')
 
 # Update the phylip header to reflect the new number of individuals 
 new_phylip_header = pd.DataFrame(columns = ['ID', 'seq'], index=[0])
